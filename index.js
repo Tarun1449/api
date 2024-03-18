@@ -9,7 +9,7 @@ app.use(cors());
 
 
 
-const arr = ["2", "4", "5", "2", "b"];
+
 let odd = [];
   let even = [];
   let alphabets = [];
@@ -27,9 +27,6 @@ function printOddEvenAlphabets(arr) {
     }
   }
 
-  console.log("Odd numbers:", odd);
-  console.log("Even numbers:", even);
-  console.log("Alphabets:", alphabets);
 }
 
 const userData = {
@@ -47,7 +44,7 @@ const userData = {
 app.post('/api',(req,res)=>{
   const dataa = req.body.data;
   printOddEvenAlphabets(dataa);
-  res.send(JSON.stringify(userData));
+  res.end(JSON.stringify(userData));
 });
 
 app.listen(8000,()=>{
