@@ -41,7 +41,7 @@ const userData = {
 
 
 
-app.post('/api',(req,res)=>{
+app.post('/bfhl',(req,res)=>{
   const dataa = req.body.data;
   printOddEvenAlphabets(dataa);
   res.end(JSON.stringify(userData));
